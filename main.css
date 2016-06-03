@@ -8,7 +8,8 @@ body {
   }
 main {
     display: block;
-    font-family: 'Avenir Next';
+    font-family: 'Avenir';
+    letter-spacing: 2px;
   }
 span {
   display:block;
@@ -29,7 +30,7 @@ span {
   bottom: 0px;
   background-color: #686859;
 }
-header {
+#bin-page {
   font-size: 55px;
   color: #4C0066;
   position: absolute;
@@ -40,13 +41,11 @@ header {
 }
 #userButton {
   text-align: center;
-  font-family: 'Avenir';
   font-size: 20px;
   position: absolute;
   background-color: #353526;
   color: white;
   top: 50%;
-  bottom: 50%;
   left: 18%;
   right: 60%;
   width: 15vw;
@@ -77,4 +76,50 @@ small {
   text-indent: 65px;
   position: fixed;
   text-align: left;
+}
+#playlist-page {
+  color: white;
+  background-color: #9B9B8C;
+  font-size:30px;
+  width: 100vw;
+  height: 5vh;
+  text-align: left;
+  position: fixed;
+  text-indent: 65px;
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+#middle {
+  display: block;
+}
+#bin {
+  display: block;
+  background-color: #EEEEEE;
+  border-bottom: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 50vw;
+  height: 25vh;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+input[type="button"] {
+  font-size: 20px;
+  position: absolute;
+  background-color: #353526;
+  color: white;
+  width: 15vw;
+  height: 6vh;
+  border-radius: 8px
+}
+#clear {
+  top: 70%;
+  left: 5%;
+  right: 60%;
+}
+#submit {
+  top: 70%;
+  left: 25%;
+  right: 25%;
 }
