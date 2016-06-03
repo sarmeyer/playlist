@@ -1,0 +1,80 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("fonts/AvenirNextLTPro-Regular.otf");
+  }
+main {
+    display: block;
+    font-family: 'Avenir Next';
+  }
+span {
+  display:block;
+  min-height: 40px;
+  min-width: 100%;
+}
+#top {
+  position:absolute;
+  top:0px;
+  background-color: #9B9B8C;
+  border-bottom: 1px;
+  border-color: black;
+  border-style: solid;
+  z-index: 2;
+}
+#bottom {
+  position: absolute;
+  bottom: 0px;
+  background-color: #686859;
+}
+header {
+  font-size: 55px;
+  color: #4C0066;
+  position: absolute;
+  top: 40%;
+  bottom: 50%;
+  left: 18%;
+  right: 60%;
+}
+#userButton {
+  text-align: center;
+  font-family: 'Avenir';
+  font-size: 20px;
+  position: absolute;
+  background-color: #353526;
+  color: white;
+  top: 50%;
+  bottom: 50%;
+  left: 18%;
+  right: 60%;
+  width: 15vw;
+  height: 6vh;
+  border-radius: 8px
+}
+.left {
+  background-color: #EEEEEE;
+  float: left;
+  height: 100vh;
+  width: 50%;
+}
+.right {
+  background-image: url('resources/track.jpg');
+  background-position: center;
+  opacity: .19;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: right;
+  height: 100vh;
+  min-width: 50%;
+  z-index: 1;
+}
+small {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  text-indent: 65px;
+  position: fixed;
+  text-align: left;
+}
