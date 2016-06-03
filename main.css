@@ -16,6 +16,25 @@ span {
   min-height: 40px;
   min-width: 100%;
 }
+.albumImg {
+  z-index: 3;
+  position: absolute;
+  height: 218px;
+  width: 200px;
+  left: 65%;
+}
+#img1 {
+  top: 7%;
+  bottom: 60%;
+}
+#img2 {
+  top: 36%;
+  bottom: 50%;
+}
+#img3 {
+  top: 65%;
+  bottom:25%;
+}
 #top {
   position:absolute;
   top:0px;
@@ -91,6 +110,11 @@ small {
 }
 #middle {
   display: block;
+}
+#albums{
+  width: 100vw;
+  height: 5vh;
+  overflow: scroll;
 }
 #bin {
   display: block;
