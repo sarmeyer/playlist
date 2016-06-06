@@ -113,10 +113,20 @@ small {
 }
 #albums{
   width: 100vw;
-  height: 5vh;
+  height: 22vh;
+  position:absolute;
+  top: 18%;
   overflow: scroll;
 }
-#bin {
+.albumBin {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+}
+#alb1 {
+  margin-left: 75px;
+}
+#textBin {
   display: block;
   background-color: #EEEEEE;
   border-bottom: 2px;
@@ -135,6 +145,7 @@ input[type="button"] {
   color: white;
   width: 15vw;
   height: 6vh;
+  letter-spacing: 2px;
   border-radius: 8px
 }
 #clear {
