@@ -1,7 +1,6 @@
 $(document).ready(function(){
   $.get("https://lit-fortress-6467.herokuapp.com/object", function(data, status){
     $('.left').append('<div>').addClass('randomAlbum');
-    console.log(data.results);
     for (var i = 0; i < 3; i++) {
         var images = ['21.jpg', 'ghost_in_the_machine.jpg', 'red.jpg', 'the_division_bell.jpg', 'thriller.jpg'];
             $('<img class="albumImg" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('.randomAlbum');
@@ -24,5 +23,10 @@ $(document).ready(function(){
       $('#clear').on('click',function(){
         $('#textBin').empty()
       })
+      $('#submit').on('click',function(){
+        $.post("https://lit-fortress-6467.herokuapp.com/post", function(data, status){
+        console.log(data);
+          });
+        });
+      })
     });
-  });
