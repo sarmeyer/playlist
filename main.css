@@ -116,6 +116,9 @@ small {
   height: 22vh;
   position:absolute;
   top: 18%;
+  float: left;
+  margin-right: -999em;
+  white-space: nowrap;
   overflow: scroll;
 }
 .albumBin {

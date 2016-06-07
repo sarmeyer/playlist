@@ -1,25 +1,27 @@
 $(document).ready(function(){
-  $.get("https://lit-fortress-6467.herokuapp.com/object", function(data, status){
-    $('.left').append('<div>').addClass('randomAlbum');
-    for (var i = 0; i < 3; i++) {
-        var images = ['21.jpg', 'ghost_in_the_machine.jpg', 'red.jpg', 'the_division_bell.jpg', 'thriller.jpg'];
-            $('<img class="albumImg" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('.randomAlbum');
+  $.get("https://api.spotify.com/v1/artists/26dSoYclwsYLMAKD3tpOr4/albums", function(data, status){
+    var albums = data.items;
+    console.log(data.items);
+      albums.forEach(function(item){
+          $('.left').append('<img class="albumImg" src=' + item.images[1].url + '>');
             var idCount = 1;
             $('img').each(function() {
-        $(this).attr('id', 'img' + idCount);
-        idCount++;
-        });
-      }
-      for (var i = 0; i < data.results.length; i++) {
-        $('#albums').append(`<img class="albumBin" id=${data.results[i].id} src=images/${data.results[i].cover_art}>`);
-        }
-        $('.albumBin').on("click",function(){
-          for (var j = 0; j < data.results.length; j++) {
-          if (data.results[j].id == this.id) {
-              $('#textBin').append(`<p>${data.results[j].artist}: ${ data.results[j].title}</p>`);
-          }
-        }
-      })
+              $(this).attr('id', 'img' + idCount);
+              idCount++;
+              })
+            })
+
+            //********playlist Page********//
+        albums.forEach(function(item){
+      $('#albums').append('<img class="albumBin" src=' + item.images[1].url + '>');
+    })
+      //   $('.albumBin').on("click",function(){
+      //   //   for (var j = 0; j < data.results.length; j++) {
+      //   //   if (data.results[j].id == this.id) {
+      //   //       $('#textBin').append(`<p>${data.results[j].artist}: ${ data.results[j].title}</p>`);
+      //   //   }
+      //   // }
+      // })
       $('#clear').on('click',function(){
         $('#textBin').empty()
       })
