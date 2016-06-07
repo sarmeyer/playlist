@@ -13,22 +13,15 @@ $(document).ready(function(){
 
             //********playlist Page********//
         albums.forEach(function(item){
-      $('#albums').append('<img class="albumBin" src=' + item.images[1].url + '>');
-    })
-      //   $('.albumBin').on("click",function(){
-      //   //   for (var j = 0; j < data.results.length; j++) {
-      //   //   if (data.results[j].id == this.id) {
-      //   //       $('#textBin').append(`<p>${data.results[j].artist}: ${ data.results[j].title}</p>`);
-      //   //   }
-      //   // }
-      // })
+      $('#albums').append('<img class="albumBin" id=' + item.id + ' src=' + item.images[1].url + '>');
+      $('.albumBin').on("click",function(){
+        if(item.id === this.id) {
+        $('#textBin').append('<p>' + item.name + '</p>');
+          }
+      })
       $('#clear').on('click',function(){
         $('#textBin').empty()
-      })
-      $('#submit').on('click',function(){
-        $.post("https://lit-fortress-6467.herokuapp.com/post", function(data, status){
-        console.log(data);
-          });
+          })
         });
       })
     });
