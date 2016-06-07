@@ -17,7 +17,7 @@ $(document).ready(function(){
         $('.albumBin').on("click",function(){
           for (var j = 0; j < data.results.length; j++) {
           if (data.results[j].id == this.id) {
-              $('#textBin').append(`<p>${data.results[j].title}</p>`);
+              $('#textBin').append(`<p>${data.results[j].artist}: ${ data.results[j].title}</p>`);
           }
         }
       })
