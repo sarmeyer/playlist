@@ -1,10 +1,13 @@
 $(document).ready(function(){
   $.get("https://lit-fortress-6467.herokuapp.com/object", function(data, status){
     $('.left').append('<div>').addClass('randomAlbum');
+    console.log(data.results);
     for (var i = 0; i < 3; i++) {
-      $('.randomAlbum').append(`<img class="albumImg" src='images/${data.results[i].cover_art}' />`);
-      var idCount = 1;
-      $('img').each(function() {
+      var newArray = data.results;
+        var images = ['21.jpg', 'ghost_in_the_machine.jpg', 'red.jpg', 'the_division_bell.jpg', 'thriller.jpg'];
+            $('<img class="albumImg" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('.randomAlbum');
+            var idCount = 1;
+            $('img').each(function() {
         $(this).attr('id', 'img' + idCount);
         idCount++;
         });
