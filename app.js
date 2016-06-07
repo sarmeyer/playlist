@@ -11,16 +11,17 @@ $(document).ready(function(){
       }
       for (var i = 0; i < data.results.length; i++) {
         $('#albums').append(`<img class="albumBin" src=images/${ data.results[i].cover_art}>`);
+        $('#albums').on("click",'img',function(){
+          $('#textBin').append('<p>hello</p>');
         var idCount2 = 1;
         $('img').each(function() {
           $(this).attr('id', 'alb' + idCount2);
           idCount2++;
+        });
         })
       }
+      $('#clear').on('click',function(){
+        $('#textBin').empty()
+      })
     });
   });
-    //       });
-    //       $('.albumBin').on("click",function(index){
-    //         console.log(data.results[index].title);
-    //         $('#textBin').append('<p>' + data.results[index].title + '</p>');
-    //       });
