@@ -140,6 +140,7 @@ small {
   position: absolute;
   top: 40%;
   left: 5%;
+  overflow: scroll;
 }
 input[type="button"] {
   font-size: 20px;
