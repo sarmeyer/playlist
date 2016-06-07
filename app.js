@@ -9,16 +9,16 @@ $(document).ready(function(){
         idCount++;
         });
       }
+      for (var i = 0; i < data.results.length; i++) {
+        $('#albums').append(`<img class="albumBin" src=images/${ data.results[i].cover_art}>`);
+        var idCount2 = 1;
+        $('img').each(function() {
+          $(this).attr('id', 'alb' + idCount2);
+          idCount2++;
+        })
+      }
     });
   });
-    // for (var i = 0; i < data.results.length; i++) {
-    //   $('#albums').append(`<img class="albumBin" src=images/${ data.results[i].cover_art}>`);
-    //   var idCount2 = 1;
-    //   $('img').each(function() {
-    //     $(this).attr('id', 'alb' + idCount2);
-    //     idCount2++;
-    //           })
-    //         }
     //       });
     //       $('.albumBin').on("click",function(index){
     //         console.log(data.results[index].title);
