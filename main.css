@@ -139,7 +139,7 @@ small {
   height: 25vh;
   position: absolute;
   top: 40%;
-  left: 55%;
+  left: 45%;
   overflow: scroll;
 }
 input[type="button"] {
@@ -154,21 +154,21 @@ input[type="button"] {
 }
 #clear {
   top: 70%;
-  left: 55%;
+  left: 53%;
 }
 #submit {
   top: 70%;
   left: 75%;
 }
-#search {
+#searchText {
   width: auto;
   height: 30px;
   position: absolute;
   top: 42%;
-  left: 20%;
+  left: 18%;
 }
 #searchButton {
   top: 50%;
-  left: 15%;
+  left: 10%;
   width: 25vw;
 }
