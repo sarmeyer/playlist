@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   $searchButton.on('click', makeRequest);
   $(document).on('click','.artists', getArt);
-
+  $(document).on('click','.artwork',getTracks)
 
   function makeRequest(userInput){
     var userInput = $('#searchText').val();
@@ -25,7 +25,7 @@ $(document).ready(function(){
       $('#textBin').append(name);
       })
     }
-    function getArt(albums) {
+    function getArt() {
       $.get('https://api.spotify.com/v1/artists/'+ this.id +'/albums', function(data,status) {
         showArt(data.items)
       })
@@ -34,14 +34,28 @@ $(document).ready(function(){
       $('#albums').empty();
       var duplicates = [];
       albums.forEach(function(album){
+        var ids = album.id;
         var results = album.name.toLowerCase();
         if(duplicates.indexOf(results) === -1) {
           duplicates.push(results)
           var albumUrl = album.images[1].url;
-          $('#albums').append('<img src=' + albumUrl + '>');
+          $('<img class=artwork id='+ids+' src=' + albumUrl + '>').appendTo('#albums');
         }
-        console.log(duplicates);
       })
    }
+   function getTracks(){
+     $.get('https://api.spotify.com/v1/albums/'+this.id+'/tracks', function(data,status) {
+       showTracks(data.items)
+     })
+   }
+   function showTracks(tracks){
+     $('#textBin').empty();
+     tracks.forEach(function(track){
+       var track_name = document.createElement('h2');
+       $(track_name).addClass('titles');
+       track_name.innerHTML = track.name;
+       $('#textBin').append(track_name);
+       })
+     }
 
 });
