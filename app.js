@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
-    var $searchButton = $('#searchButton');
-    // var clear = $inputs[2];
-    // var submit = $inputs[3];
-
+  var $searchButton = $('#searchButton');
   $searchButton.on('click', makeRequest);
   $(document).on('click','.artists', getArt);
   $(document).on('click','.artwork',getTracks)
@@ -57,5 +54,4 @@ $(document).ready(function(){
        $('#textBin').append(track_name);
        })
      }
-
 });
