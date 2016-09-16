@@ -84,10 +84,14 @@ span {
     overflow: scroll;
     z-index: 4;
 }
+.artists {
+    margin-left: 0% !important;
+}
 .artists:hover {
     color: #90C3D4;
 }
 h2 {
+    margin-top: .8em;
     margin-left: -15%;
 }
 iframe {
@@ -252,6 +256,8 @@ header a, a:visited {
     -o-animation: move-clouds-back 200s linear infinite;
     -webkit-animation: move-clouds-back 200s linear infinite;
     animation: move-clouds-back 200s linear infinite;
+}
+
 }
 
 }
