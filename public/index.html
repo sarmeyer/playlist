@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='playlist'>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <title>Track Bin</title>
+    </head>
+    <body>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+
+          <div ng-view></div>
+
+            <span class='bottom'>
+                <a class='link' href="https://sarahmichelle.info">@sarmeyer
+                </a>
+            </span>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js'></script>
+        <script type="text/javascript" src='app.js'></script>
+        <script type="text/javascript" src="router.js"></script>
+    </body>
+</html>
