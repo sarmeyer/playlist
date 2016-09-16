@@ -1,26 +1,26 @@
 $(document).ready(function(){
 
-  var $searchButton = $('#searchButton');
+  var $searchButton = $('.searchButton');
   $searchButton.on('click', makeRequest);
-  $('#clear').on('click', clearBin);
+  $('.clear').on('click', clearBin);
   $(document).on('click','.artists', getArt);
   $(document).on('click','.artwork', getTracks);
 
   function makeRequest(userInput){
-    var userInput = $('#searchText').val();
+    var userInput = $('.searchText').val();
     $.get(`https://api.spotify.com/v1/search?q=${userInput}&type=artist`, function(data, status){
     showArtist(data.artists.items);
       })
     }
   function showArtist(artists){
-    $('#textBin').empty();
+    $('.textBin').empty();
     artists.forEach(function(result){
       var artistID = result.id;
       var name = document.createElement('h2');
       $(name).addClass('artists');
       name.id = artistID;
       name.innerHTML = result.name;
-      $('#textBin').append(name);
+      $('.textBin').append(name);
       })
     }
     function getArt() {
@@ -29,7 +29,7 @@ $(document).ready(function(){
       })
     }
     function showArt(albums) {
-      $('#albums').empty();
+      $('.albums').empty();
       var duplicates = [];
       albums.forEach(function(album){
         var ids = album.id;
@@ -37,8 +37,8 @@ $(document).ready(function(){
         if(duplicates.indexOf(results) === -1) {
           duplicates.push(results)
           var albumUrl = album.images[1].url;
-          $('<img class=artwork id='+ids+' src=' + albumUrl + '>').appendTo('#albums');
-          $('#playlist-page').html('click an album to hear its tracks')
+          $('<img class=artwork id='+ids+' src=' + albumUrl + '>').appendTo('.albums');
+          $('.playlist-page').html('click an album to hear its tracks')
         }
       })
    }
@@ -48,14 +48,14 @@ $(document).ready(function(){
      })
    }
    function showTracks(tracks){
-     $('#textBin').empty();
+     $('.textBin').empty();
      tracks.forEach(function(track){
        var track_play = document.createElement('h2');
        track_play.innerHTML = '<iframe src="https://embed.spotify.com/?uri=' + track.uri + '" width="450" height="80" frameborder="0" allowtransparency="true"></iframe>';
-       $('#textBin').append(track_play);
+       $('.textBin').append(track_play);
        })
      }
      function clearBin(){
-       $('#textBin').empty();
+       $('.textBin').empty();
      }
 });
