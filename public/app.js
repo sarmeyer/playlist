@@ -38,7 +38,7 @@ $(document).ready(function(){
           duplicates.push(results)
           var albumUrl = album.images[1].url;
           $('<img class=artwork id='+ids+' src=' + albumUrl + '>').appendTo('.albums');
-          $('.playlist-page').html('click an album to hear its tracks')
+          $('.playlist-title').html('click an album to hear its tracks')
         }
       })
    }
@@ -53,6 +53,7 @@ $(document).ready(function(){
        var track_play = document.createElement('h2');
        track_play.innerHTML = '<iframe src="https://embed.spotify.com/?uri=' + track.uri + '" width="450" height="80" frameborder="0" allowtransparency="true"></iframe>';
        $('.textBin').append(track_play);
+       $('.playlist-title').html('Enjoy.');
        })
      }
      function clearBin(){

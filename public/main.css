@@ -21,7 +21,7 @@ span {
     z-index: 4;
     text-align: right;
 }
-.main {
+.main-link {
     font-size: 7em;
     color: #683391 !important;
     position: absolute;
@@ -32,7 +32,7 @@ span {
     font-family: 'Avenir';
     letter-spacing: 2px;
 }
-.main:hover {
+.main-link:hover {
     color: #1E777D !important;
 }
 .link {
@@ -44,92 +44,89 @@ span {
 .link:hover {
     color: #D3E9EB;
 }
-.middle {
-    display: block;
-    background: white;
-    border: 2px solid red;
-    z-index: 4;
-}
 .playlist-title {
     color: white;
-    font-size: 5em;
+    font-size: 2em;
     font-family: 'Avenir';
-    letter-spacing: 2px;
-    z-index: 4;
+    letter-spacing: .5em;
+    z-index: 5;
+    position: absolute;
 }
 .albums {
     width: 100vw;
-    height: 300px;
+    height: 45vh;
     position: absolute;
-    top: 18%;
+    top: 49%;
     float: left;
-    margin-right: -999em;
     white-space: nowrap;
     overflow: scroll;
     z-index: 4;
 }
-.albumBin {
-    width: 100px;
-    height: 300px;
-    margin: 30px;
-    z-index: 4;
+.artwork {
+    margin: 1em;
 }
-.alb1 {
-    margin-left: 75px;
+.artwork:hover {
+    border: .4em solid #D3E9EB;
 }
 .textBin {
     display: block;
-    background-color: #EEEEEE;
     border-bottom: 2px;
-    border-color: black;
+    border-color: white;
+    color: white;
+    font-family: "Avenir";
+    letter-spacing: .5em;
     border-style: solid;
     width: 50vw;
     height: 25vh;
     position: absolute;
-    top: 60%;
-    left: 45%;
+    top: 20%;
+    left: 25%;
     overflow: scroll;
     z-index: 4;
 }
+.artists:hover {
+    color: #90C3D4;
+}
 h2 {
-    margin-left: 30px;
+    margin-left: -15%;
 }
 iframe {
     margin-left: 100px;
 }
 input[type="button"] {
-    font-size: 20px;
+    font-size: 1.2em;
     position: absolute;
     background-color: #353526;
     color: white;
     width: 15vw;
     height: 6vh;
-    letter-spacing: 2px;
-    border-radius: 8px
+    letter-spacing: .2em;
+    border-radius: 3%;
+}
+input[type="button"]:hover {
+    color: #90C3D4;
 }
 .clear {
-    top: 87%;
-    left: 53%;
+    top: 30%;
     z-index: 4;
 }
 .submit {
-    top: 87%;
-    left: 75%;
+    top: 30%;
+    left: 80%;
     z-index: 4;
 }
 .searchText {
-    width: 250px;
-    height: 40px;
+    width: 25vw;
+    height: 5vh;
     font-size: 20px;
     position: absolute;
-    top: 60%;
-    left: 13%;
-    z-index: 4;
+    top: 10%;
+    left: 30%;
+    z-index: 3;
 }
 .searchButton {
-    top: 70%;
-    left: 10%;
-    width: 25vw;
+    top: 10%;
+    left: 57%;
     z-index: 4;
 }
 * {
@@ -255,6 +252,12 @@ header a, a:visited {
     -o-animation: move-clouds-back 200s linear infinite;
     -webkit-animation: move-clouds-back 200s linear infinite;
     animation: move-clouds-back 200s linear infinite;
+}
+
+}
+
+}
+
 }
 
 }
